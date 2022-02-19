@@ -55,7 +55,7 @@ class TextBox:
 
 # Get new posts
 redditScraper = RedditScraper()
-posts = redditScraper.getPostsFromSub('AmITheAsshole', 30)
+posts = redditScraper.getPostsFromSub('CasualConversation', 50)
 
 # folder to place completed images
 imagesFolder = 'img/'
@@ -65,7 +65,8 @@ boldFont = ImageFont.truetype('fonts/SourceSerif4-Bold.ttf', 48)
 italicFont = ImageFont.truetype('fonts/SourceSerif4-MediumItalic.ttf', 48)
 
 for i in range(len(posts)):
-    img = Image.open("bg_blur.png") # open image
+    #img = Image.open("bg_blur.png") # open image
+    img = Image.open("bg.png")  # open image
     post = posts.iloc[i]
     postTitle = post['title']
     postBody = post['body']
